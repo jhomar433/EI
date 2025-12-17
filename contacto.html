@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto"> 
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    <a class="nav-link" href="tienda.html">Tienda</a>
+                    <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a> 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <div class="row g-4">
+            
+            <div class="col-lg-6">
+                <h2 class="mb-4">Formulario de Contacto</h2>
+
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>¡Atención!</strong> Usa este formulario para consultas no urgentes.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <form onsubmit="return false;"> 
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="motivo" class="form-label">Motivo de la consulta</label>
+                        <select class="form-select" id="motivo">
+                            <option value="">Selecciona un motivo</option>
+                            <option value="consulta">Consulta General</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="ventas">Información de Ventas</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="archivo" class="form-label">Adjuntar documentos (opcional)</label>
+                        <input class="form-control" type="file" id="archivo" aria-describedby="archivo-help">
+                        <div id="archivo-help" class="form-text text-muted">Sin archivos seleccionados</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="rango" class="form-label">Califica tu experiencia de navegación (1-5)</label>
+                        <input type="range" class="form-range" min="1" max="5" step="1" id="rango" value="3" 
+                               data-bs-toggle="tooltip" data-bs-placement="top" title="Puntaje actual: 3">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="privacidad">
+                        <label class="form-check-label" for="privacidad">
+                            Confirmo que he leído la <a href="#" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" title="Política de Privacidad" data-bs-content="La información se usa solo para responder tu consulta.">política de privacidad</a>
+                        </label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#modalExito">
+                            <i class="bi bi-send-fill me-2"></i> Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-3">Horarios de Atención</h2>
+                <p class="text-muted">Detalle de disponibilidad de nuestro equipo de soporte.</p>
+                <p class="small text-end text-success">Tabla de Horarios (Zona Horaria GMT-5)</p>
+                <div class="table-responsive mb-5">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Día</th>
+                                <th scope="col">Horario</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-light">
+                                <th scope="row">1</th>
+                                <td>Lunes - Viernes</td>
+                                <td>9:00 - 18:00</td>
+                                <td class="text-success fw-bold">Abierto</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">2</th>
+                                <td>Sábado</td>
+                                <td>9:00 - 13:00</td>
+                                <td class="text-warning fw-bold">Medio día</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">3</th>
+                                <td>Domingo</td>
+                                <td>Cerrado</td>
+                                <td class="text-danger fw-bold">Cerrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="mb-3">Ubicación</h2>
+                <div class="border shadow-sm" style="height: 400px; width: 100%;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914407519985!2d2.2922757!3d48.8583701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee3807a514!2sTorre%20Eiffel!5e0!3m2!1ses!2spe!4v1620857904068!5m2!1ses!2spe" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <a href="https://maps.google.com/?cid=10222232094831998944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" class="btn btn-sm btn-link mt-2" target="_blank">Ver mapa más grande</a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white pt-4 pb-2 mt-5">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">Curso de Diseño y Desarrollo Web</p>
+                </div>
+                <div class="col-md-6 text-md-end mb-2 mb-md-0">
+                    <p class="mb-0">Evaluación Integral Isil © 2025-II</p>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <div class="fs-4">
+                        <a href="https://www.instagram.com/" class="text-white mx-2" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="text-white mx-2" aria-label="YouTube" target="_blank"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/" class="text-white mx-2" aria-label="TikTok" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </footer>
+    <div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalExitoLabel">¡Éxito!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i> 
+                        <p class="mb-0">Tu mensaje ha sido recibido. Te responderemos a la brevedad. (Esto es solo una simulación).</p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        (() => {
+            'use strict'
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+            const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            const rangoInput = document.getElementById('rango');
+            if (rangoInput) {
+                const tooltipInstance = bootstrap.Tooltip.getInstance(rangoInput);
+                rangoInput.addEventListener('input', function() {
+                    if (tooltipInstance) {
+                        tooltipInstance.setContent({ '.tooltip-inner': 'Puntaje actual: ' + this.value });
+                    }
+                });
+            }
+        })()
+    </script>
+</body>
+</html>

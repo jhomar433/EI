@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto"> 
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    <a class="nav-link" href="tienda.html">Tienda</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarDropdownMenuLink" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item active" aria-current="page" href="blog.html">Blog</a> 
+                            <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="py-5 bg-light text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">Nuestro Blog de Tecnología</h1>
+            <p class="lead text-muted">Artículos sobre diseño web, desarrollo y las últimas tendencias en Bootstrap.</p>
+        </div>
+    </header>
+    <main class="container my-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <h1 class="mb-4">Últimas Entradas</h1>
+                <div class="row row-cols-1 g-4">
+                    <div class="col">
+                        <div class="card card-blog-entry shadow-sm">
+                            <div class="row g-0 h-100">
+                                <div class="col-4 bg-primary text-white d-flex align-items-center justify-content-center p-3">
+                                    <span class="display-3 fw-bold text-center">GRID</span>
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Dominando el Grid System de Bootstrap 5</h5>
+                                        <p class="card-text text-muted">Una guía completa para entender cómo funciona la cuadrícula responsive y por qué es fundamental para el diseño mobile-first.</p>
+                                        <p class="card-text"><small class="text-muted">Publicado el 15 de Octubre, 2024</small></p>
+                                        <a href="#" class="btn btn-primary">Leer Artículo Completo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-blog-entry shadow-sm">
+                            <div class="row g-0 h-100">
+                                <div class="col-4 bg-success text-white d-flex align-items-center justify-content-center p-3">
+                                    <span class="display-3 fw-bold text-center">UTILITIES</span>
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">10 Clases de Utilidad que Debes Conocer</h5>
+                                        <p class="card-text text-muted">Aprende a acelerar tu flujo de trabajo con las clases de utilidad de margen, padding, color y tipografía.</p>
+                                        <p class="card-text"><small class="text-muted">Publicado el 1 de Noviembre, 2024</small></p>
+                                        <a href="#" class="btn btn-outline-primary">Leer Artículo Completo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Navegación de Publicaciones" class="mt-5 d-flex justify-content-start">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-4">
+                <div class="card p-3 mb-4 shadow-sm">
+                    <h5 class="card-title border-bottom pb-2">Categorías Populares</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Desarrollo Front-end <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Diseño UI/UX <span class="badge bg-primary rounded-pill">8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Frameworks CSS <span class="badge bg-primary rounded-pill">21</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card p-3 mb-4 shadow-sm">
+                    <h5 class="card-title border-bottom pb-2">Sobre Nosotros</h5>
+                    <p class="card-text text-muted">Somos un equipo dedicado a simplificar el desarrollo web con las mejores herramientas.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white pt-4 pb-2 mt-5">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">Curso de Diseño y Desarrollo Web</p>
+                </div>
+                <div class="col-md-6 text-md-end mb-2 mb-md-0">
+                    <p class="mb-0">Evaluación Integral Isil © 2025-II</p>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <div class="fs-4">
+                        <a href="https://www.instagram.com/" class="text-white mx-2" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="text-white mx-2" aria-label="YouTube" target="_blank"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/" class="text-white mx-2" aria-label="TikTok" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

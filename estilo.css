@@ -1,0 +1,16 @@
+.scrollspy-content { 
+    height: 500px;
+    overflow-y: scroll;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.scrollspy-nav { 
+    position: relative; 
+    top: 0; 
+}
+
+.card-blog-entry {
+    min-height: 200px;
+}
